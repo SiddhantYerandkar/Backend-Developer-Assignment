@@ -1,6 +1,6 @@
 const express = require('express')
-const slotController = require('../Controllers/slotController')
 const userController = require('../Controllers/userController')
+const studentController = require('../Controllers/studentController')
 
 const router = express.Router()
 
@@ -8,10 +8,12 @@ router.post('/register', userController.registerUser)
 
 router.post('/login', userController.login)
 
-router.get('/getDetails/:userId', userController.getUserDetails)
+router.get('/addStudent', studentController.addStudent)
 
-router.get('/getDetails', userController.getDetailsByFilter)
+router.post('/updateStudent', studentController.updateStudent)
 
-router.post('/bookSlot', slotController.bookSlot)
+router.get('/getStudentDetails', studentController.getStudentDetails)
+
+router.delete('/deleteStudent', studentController.deleteStudent)
 
 module.exports = router

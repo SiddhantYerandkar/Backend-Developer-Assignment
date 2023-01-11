@@ -18,12 +18,6 @@ const isValidName = function (name) {
     }
 }
 
-const isValidPincode = function (pincode) {
-    if (/^[1-9][0-9]{5}$/.test(pincode)) {
-        return true
-    }
-}
-
 const isValidPassword = function (pwd) {
     let passwordRegex =
         /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
@@ -35,16 +29,4 @@ const isValidPassword = function (pwd) {
     }
 }
 
-const isValidAge = function (Age) {
-    if (/^[1-9]?[0-9]{1}$|^100$/.test(Age)) {
-        return true
-    }
-}
-
-const isValidAdhaar = function (AadharNo) {
-    if (/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/.test(AadharNo)) {
-        return true
-    }
-}
-
-module.exports = { isValidMobile, isValidName, isValidPassword, isValidPincode, isValidString, isValidAge, isValidAdhaar }
+module.exports = { isValidMobile, isValidName, isValidPassword, isValidString }

@@ -14,22 +14,6 @@ const userSchema= new mongoose.Schema({
     password:{
         type:String,
         trim:true
-    }, Age: {
-        type: Number,
-        required: true,
-        trim: true
-    }, Pincode: {
-        type: Number,
-        required: true,
-        trim: true
-    }, AadharNo: {
-        type: String,
-        required: true,
-        trim: true
-    },vaccinationStatus :{
-        type : String,
-        enum : ['none','First Dose Completed','All Completed'],
-        default : "none"
     }
 })
 
